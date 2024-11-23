@@ -1,0 +1,10 @@
+{
+  "name": "lajemacarts-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/lajemacarts-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["lajemacarts"],
+  "// targets": "to see all targets run: nx show project lajemacarts-e2e --web",
+  "targets": {}
+}

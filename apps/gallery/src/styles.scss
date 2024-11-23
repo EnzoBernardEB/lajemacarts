@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@use "../../../m3-theme";
+
+@include mat.core();
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #1A1A1A; // Fond sombre
+  color: white; // Texte en blanc
+}
+
+mat-card {
+  background-color: #ca1212; // Couleur de fond des cartes
+  border: 1px solid #444444; // Bordure des cartes
+  border-radius: 8px; // Arrondir les coins
+  padding: 16px; // Espacement interne
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); // Ombre pour la profondeur
+}
+
+html {
+  @include mat.core-theme(m3-theme.$dark-theme);
+  @include mat.button-theme(m3-theme.$dark-theme);
+  @include mat.all-component-themes(m3-theme.$dark-theme);
+}
+
+.button {
+  background-color: #ffffff; // Couleur de fond des boutons
+  color: #000000; // Couleur du texte des boutons
+  border-radius: 4px; // Arrondir les coins
+  padding: 8px 16px; // Espacement interne
+  &:hover {
+    background-color: #f0f0f0; // Couleur de fond au survol
+  }
+}
+
+.card-content {
+  margin-bottom: 16px; // Espacement entre les éléments
+}

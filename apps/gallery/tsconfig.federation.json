@@ -1,0 +1,40 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": []
+  },
+  "files": [
+    "src/main.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts",
+    "..\\..\\node_modules\\@angular\\animations\\fesm2022\\animations.mjs",
+    "..\\..\\node_modules\\@angular\\cdk\\fesm2022\\cdk.mjs",
+    "..\\..\\node_modules\\@angular\\common\\fesm2022\\common.mjs",
+    "..\\..\\node_modules\\@angular\\compiler\\fesm2022\\compiler.mjs",
+    "..\\..\\node_modules\\@angular\\core\\fesm2022\\core.mjs",
+    "..\\..\\node_modules\\@angular\\forms\\fesm2022\\forms.mjs",
+    "..\\..\\node_modules\\@angular\\material\\fesm2022\\material.mjs",
+    "..\\..\\node_modules\\@angular\\platform-browser\\fesm2022\\platform-browser.mjs",
+    "..\\..\\node_modules\\@angular\\platform-browser-dynamic\\fesm2022\\platform-browser-dynamic.mjs",
+    "..\\..\\node_modules\\@angular\\router\\fesm2022\\router.mjs",
+    "..\\..\\node_modules\\@nestjs\\common\\index.js",
+    "..\\..\\node_modules\\@nestjs\\config\\index.js",
+    "..\\..\\node_modules\\@nestjs\\core\\index.js",
+    "..\\..\\node_modules\\@nestjs\\platform-express\\index.js",
+    "..\\..\\node_modules\\@nestjs\\swagger\\index.js",
+    "..\\..\\node_modules\\@nestjs\\typeorm\\index.js",
+    "..\\..\\node_modules\\angular-in-memory-web-api\\fesm2022\\angular-in-memory-web-api.mjs",
+    "..\\..\\node_modules\\class-transformer\\esm5\\index.js",
+    "..\\..\\node_modules\\mysql2\\index.js",
+    "..\\..\\node_modules\\rxjs\\dist\\esm5\\index.js",
+    "..\\..\\node_modules\\swagger-ui-express\\index.js",
+    "..\\..\\node_modules\\tslib\\modules\\index.js",
+    "..\\..\\node_modules\\typeorm\\index.mjs"
+  ],
+  "exclude": [
+    "jest.config.ts",
+    "src*.spec.ts"
+  ]
+}

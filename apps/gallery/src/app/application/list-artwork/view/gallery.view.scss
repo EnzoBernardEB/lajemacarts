@@ -1,0 +1,57 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.artwork-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+  background-color: #2A2A2A; // Couleur de fond des cartes
+  border: 1px solid #444444; // Bordure des cartes
+  border-radius: 8px; // Arrondir les coins
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); // Ombre pour la profondeur
+
+  img {
+    margin: auto;
+    border-radius: 4px; // Arrondir les coins de l'image
+  }
+
+  mat-card-subtitle, .materials {
+    display: flex;
+  }
+
+  mat-chip {
+    margin-right: 4px;
+    background-color: #444444; // Couleur de fond des chips
+    color: #ffffff; // Couleur du texte des chips
+  }
+}
+
+.artwork-card:hover {
+  transform: scale(1.05);
+  background-color: #3A3A3A; // Couleur de fond au survol
+}
+
+mat-card-title {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #ffffff; // Couleur du titre
+}
+
+mat-card-subtitle {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #cccccc; // Couleur du sous-titre
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 0.875rem;
+}
