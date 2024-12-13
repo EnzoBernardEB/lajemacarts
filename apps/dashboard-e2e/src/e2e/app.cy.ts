@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('dashboard-e2e', () => {
+describe('usecases-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {

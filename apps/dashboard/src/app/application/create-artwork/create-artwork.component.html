@@ -1,0 +1,63 @@
+<mat-card>
+  <mat-card-title>Ajouter une Nouvelle Œuvre</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="artworkForm" (ngSubmit)="onSubmit()">
+
+      <!-- Titre -->
+      <mat-form-field appearance="fill">
+        <mat-label>Titre</mat-label>
+        <input matInput formControlName="title" required>
+      </mat-form-field>
+
+      <!-- Description -->
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+
+      <!-- Type -->
+      <mat-form-field appearance="fill">
+        <mat-label>Type d'Œuvre</mat-label>
+        <mat-select formControlName="type">
+          <mat-option *ngFor="let type of artworkTypes" [value]="type">{{ type }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Disponibilité -->
+      <mat-form-field appearance="fill">
+        <mat-label>Disponibilité</mat-label>
+        <mat-select formControlName="availability">
+          <mat-option [value]="true">Disponible</mat-option>
+          <mat-option [value]="false">Indisponible</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- URL de la Photo -->
+      <mat-form-field appearance="fill">
+        <mat-label>URL de la Photo</mat-label>
+        <input matInput formControlName="photo">
+      </mat-form-field>
+
+      <!-- Matériau -->
+      <mat-form-field appearance="fill">
+        <mat-label>Matériau</mat-label>
+        <mat-select formControlName="material">
+          <mat-option *ngFor="let material of artworkMaterials" [value]="material">{{ material }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Prix -->
+      <mat-form-field appearance="fill">
+        <mat-label>Prix (€)</mat-label>
+        <input matInput type="number" formControlName="price" required>
+      </mat-form-field>
+
+      <!-- Actions -->
+      <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+        <button mat-raised-button color="primary" type="submit">Enregistrer</button>
+        <button mat-button color="warn" routerLink="/artworks">Annuler</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>

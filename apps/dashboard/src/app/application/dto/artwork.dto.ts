@@ -1,5 +1,4 @@
-export interface Artwork {
-    id: number;
+export interface ArtworkDto {
     title: string;
     description: string;
     type: string;

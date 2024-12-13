@@ -1,4 +1,4 @@
-export enum ArtworkMaterial {
+export enum ArtworkMaterialEnum {
     bois = 'Bois',
     resine = 'Résine',
     gravueElectrique = 'Gravure électrique',

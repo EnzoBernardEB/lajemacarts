@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { AppComponent } from './app.component';
+import { ArtworkListComponent } from './application/artwork-list/artwork-list.component';
+import { CreateArtworkComponent } from './application/create-artwork/create-artwork.component';
 
 export const appRoutes: Route[] = [
-  {
-    path: '',
-    component: AppComponent
-  }
+  { path: '', redirectTo: '/artworks', pathMatch: 'full' },
+  { path: 'artworks', component: ArtworkListComponent },
+  { path: 'artworks/new', component: CreateArtworkComponent }
 ];

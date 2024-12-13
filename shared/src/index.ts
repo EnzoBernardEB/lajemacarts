@@ -1,3 +1,3 @@
-export * from './lib/components/not-found/not-found.component';
-
-export * from './lib/entities/interfaces/message';
+export * from './lib/components';
+export * from './lib/models';
+export * from './lib/enums';

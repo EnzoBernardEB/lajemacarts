@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { ArtworkType } from '../../domain/enums/artwork-type';
-import { ArtworkMaterial } from '../../domain/enums/artwork-material';
 import { AutoMap } from '@automapper/classes';
+import { ArtworkTypeEnum } from '../../domain/entities/artwork-type.enum';
+import { ArtworkMaterialEnum } from '../../domain/entities/artwork-material.enum';
 
 export class ArtworkDto {
   @AutoMap()
@@ -17,8 +17,8 @@ export class ArtworkDto {
   description!: string;
 
   @AutoMap()
-  @ApiProperty({ example: 'PAINTING', description: 'The type of the artwork.', enum: ArtworkType })
-  type!: ArtworkType;
+  @ApiProperty({ example: 'PAINTING', description: 'The type of the artwork.', enum: ArtworkTypeEnum })
+  type!: ArtworkTypeEnum;
 
   @AutoMap()
   @ApiProperty({ example: true, description: 'The availability of the artwork.' })
@@ -29,8 +29,8 @@ export class ArtworkDto {
   photo!: string;
 
   @AutoMap()
-  @ApiProperty({ example: 'WOOD', description: 'The material of the artwork.', enum: ArtworkMaterial })
-  material!: ArtworkMaterial;
+  @ApiProperty({ example: 'WOOD', description: 'The material of the artwork.', enum: ArtworkMaterialEnum })
+  material!: ArtworkMaterialEnum;
 
   @AutoMap()
   @ApiProperty({ example: 150.00, description: 'The price of the artwork.' })

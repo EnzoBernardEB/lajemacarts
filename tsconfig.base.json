@@ -10,13 +10,30 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lajemacarts/shared": ["shared/src/index.ts"]
+      "@lajemacarts/shared/*": [
+        "shared/src/lib/*"
+      ],
+      "@lajemacarts/shared/enums": [
+        "shared/src/lib/enums/index.ts"
+      ],
+      "@lajemacarts/shared/models": [
+        "shared/src/lib/models/index.ts"
+      ],
+      "@lajemacarts/shared/components": [
+        "shared/src/lib/components/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

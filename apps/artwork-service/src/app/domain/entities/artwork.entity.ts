@@ -1,16 +1,16 @@
-import { ArtworkType } from '../enums/artwork-type';
-import { ArtworkMaterial } from '../enums/artwork-material';
+import { ArtworkTypeEnum } from './artwork-type.enum';
+import { ArtworkMaterialEnum } from './artwork-material.enum';
 
 export class Artwork {
   constructor(
     public readonly id: number,
     public title: string,
     public description: string,
-    public type: ArtworkType,
+    public type: ArtworkTypeEnum,
     public availability: boolean,
     public photo: string,
-    public material: ArtworkMaterial,
-    public price: number,
+    public material: ArtworkMaterialEnum,
+    public price: number
   ) {
     this.validate();
   }

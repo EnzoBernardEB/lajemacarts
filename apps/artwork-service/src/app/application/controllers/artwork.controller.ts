@@ -25,15 +25,16 @@ export class ArtworkController {
     private readonly getArtworkByIdUseCase: GetArtworkByIdUseCase,
     private readonly updateArtworkUseCase: UpdateArtworkUseCase,
     private readonly deleteArtworkUseCase: DeleteArtworkUseCase,
-    @InjectMapper() private readonly mapper: Mapper,
-  ) {}
+    @InjectMapper() private readonly mapper: Mapper
+  ) {
+  }
 
   @Get()
   @ApiOperation({ summary: 'Get all artworks' })
   @ApiResponse({ status: 200, description: 'Returns all artworks.', type: [ArtworkDto] })
   findAll(): Observable<ArtworkDto[]> {
     return this.getAllArtworksUseCase.getAll().pipe(
-      map((artworks) => this.mapper.mapArray(artworks, ArtworkDto, Artwork)),
+      map((artworks) => this.mapper.mapArray(artworks, ArtworkDto, Artwork))
     );
   }
 
@@ -42,7 +43,7 @@ export class ArtworkController {
   @ApiResponse({ status: 200, description: 'Returns the requested artwork.', type: ArtworkDto })
   findOne(@Param('id') id: number): Observable<ArtworkDto> {
     return this.getArtworkByIdUseCase.getById(id).pipe(
-      map((artwork) => this.mapper.map(artwork, ArtworkDto, Artwork)),
+      map((artwork) => this.mapper.map(artwork, ArtworkDto, Artwork))
     );
   }
 
@@ -53,7 +54,7 @@ export class ArtworkController {
   create(@Body() createArtworkDto: CreateArtworkDto): Observable<CreateArtworkDto> {
     const artwork = this.mapper.map(createArtworkDto, CreateArtworkDto, Artwork);
     return this.createArtworkUseCase.create(artwork).pipe(
-      map((createdArtwork) => this.mapper.map(createdArtwork, ArtworkDto, CreateArtworkDto)),
+      map((createdArtwork) => this.mapper.map(createdArtwork, Artwork, CreateArtworkDto))
     );
   }
 
@@ -62,11 +63,11 @@ export class ArtworkController {
   @ApiResponse({ status: 200, description: 'The artwork has been successfully updated.', type: UpdateArtworkDto })
   update(
     @Param('id') id: number,
-    @Body() updateArtworkDto: UpdateArtworkDto,
+    @Body() updateArtworkDto: UpdateArtworkDto
   ): Observable<UpdateArtworkDto> {
     const artwork = this.mapper.map(updateArtworkDto, UpdateArtworkDto, Artwork);
     return this.updateArtworkUseCase.update(id, artwork).pipe(
-      map((updatedArtwork) => this.mapper.map(updatedArtwork, ArtworkDto, Artwork)),
+      map((updatedArtwork) => this.mapper.map(updatedArtwork, ArtworkDto, Artwork))
     );
   }
 

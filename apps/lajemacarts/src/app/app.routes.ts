@@ -12,11 +12,11 @@ export const appRoutes: Routes = [
     path: 'galerie',
     loadChildren: () =>
       loadRemoteModule('gallery', './Routes').then((m) => m.appRoutes)
-  },  
+  },
   {
     path: 'tableau-de-bord',
     loadChildren: () =>
-      loadRemoteModule('dashboard', './Routes').then((m) => m.appRoutes)
+      loadRemoteModule('usecases', './Routes').then((m) => m.appRoutes)
   },
   {
     path: '',

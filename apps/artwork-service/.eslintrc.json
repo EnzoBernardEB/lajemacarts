@@ -19,7 +19,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "lajemacarts",
+            "prefix": "artwork-service",
             "style": "camelCase"
           }
         ],
@@ -27,7 +27,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "lajemacarts",
+            "prefix": "artwork-service",
             "style": "kebab-case"
           }
         ]

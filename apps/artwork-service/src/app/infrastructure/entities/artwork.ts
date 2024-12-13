@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn, Unique } from 'typeorm';
-import { ArtworkType } from '../../domain/enums/artwork-type';
-import { ArtworkMaterial } from '../../domain/enums/artwork-material';
 import { AutoMap } from '@automapper/classes';
+import { ArtworkTypeEnum } from '../../domain/entities/artwork-type.enum';
+import { ArtworkMaterialEnum } from '../../domain/entities/artwork-material.enum';
 
 @Entity()
 @Unique(['title'])
@@ -20,7 +20,7 @@ export class ArtworkEntity {
 
   @AutoMap()
   @Column()
-  type!: ArtworkType;
+  type!: ArtworkTypeEnum;
 
   @AutoMap()
   @Column()
@@ -32,7 +32,7 @@ export class ArtworkEntity {
 
   @AutoMap()
   @Column()
-  material!: ArtworkMaterial;
+  material!: ArtworkMaterialEnum;
 
   @AutoMap()
   @Column()
